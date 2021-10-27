@@ -10,10 +10,17 @@ public class KeyboardInput : MonoBehaviour
 	List<GameObject> flowers;
 	[SerializeField] AudioClip[] notes;
 	[SerializeField] Text textbox;
+	Keyboard keyboard;
+	[SerializeField] Vector2 flowerBoxTopLeft;
+	[SerializeField] float flowerBoxHeight;
+	[SerializeField] float flowerBoxWidth;
+
+
 
 	private void Awake()
 	{
 		keyboardInput = this;
+		keyboard = new Keyboard();
 	}
 	// Start is called before the first frame update
 	void Start()
@@ -25,12 +32,38 @@ public class KeyboardInput : MonoBehaviour
 	void Update()
 	{
 		CheckInput();
+		// for debug use
+		//Debug.DrawLine(new Vector3((flowerBoxTopLeft.x), flowerBoxTopLeft.y), new Vector3((flowerBoxBottomRight.x), flowerBoxBottomRight.y),Color.white, 1,false);
+		var rect = new Rect(flowerBoxTopLeft.x, flowerBoxTopLeft.y, flowerBoxHeight, flowerBoxWidth);
+		Debug.DrawLine(new Vector3(rect.x, rect.y), new Vector3(rect.x + rect.width, rect.y), Color.green, 0, false);
+		Debug.DrawLine(new Vector3(rect.x, rect.y), new Vector3(rect.x, rect.y - rect.height), Color.red, 0, false);
+		Debug.DrawLine(new Vector3(rect.x + rect.width, rect.y - rect.height), new Vector3(rect.x + rect.width, rect.y), Color.green, 0, false);
+		Debug.DrawLine(new Vector3(rect.x + rect.width, rect.y - rect.height), new Vector3(rect.x, rect.y - rect.height), Color.red, 0, false);
+	}
+
+
+	Vector2 GetSpawnPosition(char key) // not in use, but probably will come handy later
+	{
+		Vector2 spawnPosition = new Vector2(0, 0);
+		int[] myKeyPosition;
+		for (int i = 0; i < keyboard.keyboardChars.Length; i++)
+		{
+			for (int j = 0; j < keyboard.keyboardChars[i].Length; j++)
+			{
+				if (key == keyboard.keyboardChars[i][j])
+				{
+					myKeyPosition = new int[2] { i, j };
+				}
+			}
+		}
+
+		return spawnPosition;
 	}
 
 	void SpawnFlower(int flowerIndex)
 	{
-		float spawnY = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
-		float spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
+		float spawnY = Random.Range(flowerBoxTopLeft.y, flowerBoxTopLeft.y - flowerBoxHeight);
+		float spawnX = Random.Range(flowerBoxTopLeft.x, flowerBoxTopLeft.x + flowerBoxWidth);
 
 		Vector2 spawnPosition = new Vector2(spawnX, spawnY);
 		GameObject newFlower = Instantiate(flower, spawnPosition, Quaternion.identity);
