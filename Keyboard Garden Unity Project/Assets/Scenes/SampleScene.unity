@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.3140613, g: 0.4528302, b: 0.21103594, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b324e7a89e8934e94c84ce24e89372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flower: {fileID: 3024761578441025898, guid: ec26512c428b10643ba95893ab531a64, type: 3}
+  flower: {fileID: 3971624922699639347, guid: 919be68945cdac94180376c5eeaa0165, type: 3}
   notes:
   - {fileID: 8300000, guid: b8c2f1e5586b8e642b6aa4958f45a71b, type: 3}
   - {fileID: 8300000, guid: 9701a5bb41f3bb549a63b97c140992fa, type: 3}
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 0.61960787}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
