@@ -5038,3 +5038,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5df81b1fd85ad944809a46501fab13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 1
