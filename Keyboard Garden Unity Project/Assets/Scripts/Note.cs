@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
+	public float timer;
 	public enum instrument // not in use yet, could be useful later
 	{
 		piano,
@@ -24,7 +25,11 @@ public class Note : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-
+		timer -= Time.deltaTime;
+		if (timer <= 0)
+		{
+			Destroy(gameObject);
+		}
 
 	}
 
