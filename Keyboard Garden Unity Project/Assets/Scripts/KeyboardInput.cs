@@ -62,8 +62,8 @@ public class KeyboardInput : MonoBehaviour
 
 	void SpawnFlower(int flowerIndex)
 	{
-		float spawnY = Random.Range(flowerBoxTopLeft.y, flowerBoxTopLeft.y - flowerBoxHeight);
-		float spawnX = Random.Range(flowerBoxTopLeft.x, flowerBoxTopLeft.x + flowerBoxWidth);
+		float spawnY = Random.Range(flowerBoxTopLeft.y, flowerBoxTopLeft.y - flowerBoxWidth);
+		float spawnX = Random.Range(flowerBoxTopLeft.x, flowerBoxTopLeft.x + flowerBoxHeight);
 
 		Vector2 spawnPosition = new Vector2(spawnX, spawnY);
 		GameObject newFlower = Instantiate(flower, spawnPosition, Quaternion.identity);
