@@ -77,22 +77,50 @@ public class KeyboardInput : MonoBehaviour
 	{
 		foreach (char inputChar in Input.inputString) // get input chars
 		{
-			if (inputChar == 32) // space 
+			if (inputChar == 32) // space == flower 33
 			{
 				textbox.text += inputChar;
+				SpawnFlower(33);
 			}
-			else if (inputChar == 8) // backspace
+			else if (inputChar == 8) // backspace == flower 32
 			{
 				if (textbox.text.Length > 0)
 				{
 					string temp = textbox.text;
 					textbox.text = temp.Remove(textbox.text.Length - 1, 1);
+					SpawnFlower(32); 
 				}
 
 			}
-			else if (inputChar >= 33 && inputChar <= 64) // special characters
+			else if (inputChar == '!')
+			{
+				SpawnFlower(27); // flower 27 is !
+				textbox.text += inputChar;
+			}
+			else if (inputChar == ',')
+			{
+				SpawnFlower(28); // flower 28 is ,
+				textbox.text += inputChar;
+			}
+			else if (inputChar == '.')
+			{
+				SpawnFlower(29); // flower 29 is .
+				textbox.text += inputChar;
+			}
+			else if (inputChar == '?')
+			{
+				SpawnFlower(30); // flower 30 is !
+				textbox.text += inputChar;
+			}
+			else if (inputChar == '\n')
+			{
+				SpawnFlower(31); // flower 31 is enter
+				textbox.text += inputChar;
+			}
+			else if (inputChar >= 33 && inputChar <= 64) // other special characters, default sound
 			{
 				textbox.text += inputChar;
+				SpawnFlower(34); // default sound == 34
 			}
 			else
 			{

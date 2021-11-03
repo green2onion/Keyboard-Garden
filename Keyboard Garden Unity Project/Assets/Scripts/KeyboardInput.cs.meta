@@ -3,7 +3,9 @@ guid: 47b324e7a89e8934e94c84ce24e89372
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - flower: {fileID: 3024761578441025898, guid: ec26512c428b10643ba95893ab531a64, type: 3}
+  - textbox: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

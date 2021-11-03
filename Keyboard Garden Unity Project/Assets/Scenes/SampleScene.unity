@@ -348,6 +348,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5fd6f074c82576b4da9187c7b6febc74, type: 3}
   - {fileID: 8300000, guid: 3ee8d39ba55a75a4c852ced4bc6da148, type: 3}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   textbox: {fileID: 1309470699}
   flowerBoxTopLeft: {x: -6, y: 3.5}
   flowerBoxHeight: 5
@@ -407,6 +415,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7b03d03feff7244428bbd96231ba0834, type: 3}
   - {fileID: 8300000, guid: abd8bba3ca349e84daed03448c63bc19, type: 3}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   textbox: {fileID: 1309470699}
   flowerBoxTopLeft: {x: -6, y: 3.5}
   flowerBoxHeight: 5
@@ -452,6 +468,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5fd6f074c82576b4da9187c7b6febc74, type: 3}
   - {fileID: 8300000, guid: 3ee8d39ba55a75a4c852ced4bc6da148, type: 3}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   textbox: {fileID: 1309470699}
   flowerBoxTopLeft: {x: -6, y: 3.5}
   flowerBoxHeight: 5
@@ -494,7 +518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: AAAA
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
