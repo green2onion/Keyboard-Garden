@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,7 @@ public class KeyboardInput : MonoBehaviour
 	[SerializeField] GameObject flower;
 	List<GameObject> flowers;
 	[SerializeField] AudioClip[] notes;
-	[SerializeField] Text textbox;
+	[SerializeField] TextMeshPro textbox;
 	Keyboard keyboard;
 	[SerializeField] Vector2 flowerBoxTopLeft;
 	[SerializeField] float flowerBoxHeight;
