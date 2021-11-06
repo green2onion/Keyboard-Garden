@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 904247701}
   - component: {fileID: 904247702}
   - component: {fileID: 904247699}
+  - component: {fileID: 904247703}
   m_Layer: 0
   m_Name: KeyboardInput
   m_TagString: Untagged
@@ -381,7 +382,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904247698}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47b324e7a89e8934e94c84ce24e89372, type: 3}
   m_Name: 
@@ -476,6 +477,59 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  textbox: {fileID: 1309470699}
+  flowerBoxTopLeft: {x: -6, y: 3.5}
+  flowerBoxHeight: 5
+  flowerBoxWidth: 7.5
+--- !u!114 &904247703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904247698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b324e7a89e8934e94c84ce24e89372, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flower: {fileID: 3024761578441025898, guid: ec26512c428b10643ba95893ab531a64, type: 3}
+  notes:
+  - {fileID: 8300000, guid: 855ba5c5407414643b072d82daaa7632, type: 3}
+  - {fileID: 8300000, guid: 0f64146106cbf35488fa195ae9c3cf1f, type: 3}
+  - {fileID: 8300000, guid: 60bc6e1e80588bc44968f99475268aa0, type: 3}
+  - {fileID: 8300000, guid: b4134125fef5edf45838ce5ffb288040, type: 3}
+  - {fileID: 8300000, guid: 9ecb64d51ae4d3542bda0197a4da000e, type: 3}
+  - {fileID: 8300000, guid: c93116b17f825b94da78adfe81a979a1, type: 3}
+  - {fileID: 8300000, guid: 8b8904374b5eb7c49b2a3bd018be2448, type: 3}
+  - {fileID: 8300000, guid: c05c77a7f014d9646bf28d32aa5426ab, type: 3}
+  - {fileID: 8300000, guid: 1cc5efa420b492d4bab415a4e260b6b4, type: 3}
+  - {fileID: 8300000, guid: b8a6fbe9c46c87345bdfb51535fbf831, type: 3}
+  - {fileID: 8300000, guid: 164b1c77913580c439fc02f52eb7e741, type: 3}
+  - {fileID: 8300000, guid: 29d625e55c5294a44adb051eb06f8b5e, type: 3}
+  - {fileID: 8300000, guid: 02deb19cfe1ec9c42864e7c40734db77, type: 3}
+  - {fileID: 8300000, guid: 027e29a377554e841b3eaa9a1af19088, type: 3}
+  - {fileID: 8300000, guid: 61662407dc53ca94da91f3ed174d3642, type: 3}
+  - {fileID: 8300000, guid: 48bb021353c2b00449a30c0d56dad6ad, type: 3}
+  - {fileID: 8300000, guid: 918c17b8ebdd5c34e80acde07105a40d, type: 3}
+  - {fileID: 8300000, guid: 61c9226e6ed281f4ba43df5e78688e37, type: 3}
+  - {fileID: 8300000, guid: b777ef6fa25cfdd42ad4b31552990f23, type: 3}
+  - {fileID: 8300000, guid: 7b03d03feff7244428bbd96231ba0834, type: 3}
+  - {fileID: 8300000, guid: 0e54274dd8fcf3447b364f97ff74aab2, type: 3}
+  - {fileID: 8300000, guid: a74d1ebc1b5ffe448ae03491ba4777e6, type: 3}
+  - {fileID: 8300000, guid: 3596cd7658d71d74e8c8187c2d0493e7, type: 3}
+  - {fileID: 8300000, guid: 9b12aecf9d99c484c8cd1eb1ca101384, type: 3}
+  - {fileID: 8300000, guid: a81a6d67b6ae3d34b8e1a6a34efcb829, type: 3}
+  - {fileID: 8300000, guid: 34e2c2c4fe7b11246b502a305a219029, type: 3}
+  - {fileID: 8300000, guid: 2fd9a92da68ae2d46bd7f38083c3933b, type: 3}
+  - {fileID: 8300000, guid: 2fd9a92da68ae2d46bd7f38083c3933b, type: 3}
+  - {fileID: 8300000, guid: afd3ffa50bb58af428b6daad23fc49d7, type: 3}
+  - {fileID: 8300000, guid: a90da4a878d7462419442b0ed74de878, type: 3}
+  - {fileID: 8300000, guid: a90da4a878d7462419442b0ed74de878, type: 3}
+  - {fileID: 8300000, guid: 27d5b928f2abbbd47a17d0ed85dfe85e, type: 3}
+  - {fileID: 8300000, guid: 25417370ae517e84499f55e8339d9ccd, type: 3}
+  - {fileID: 8300000, guid: a90da4a878d7462419442b0ed74de878, type: 3}
+  - {fileID: 8300000, guid: a90da4a878d7462419442b0ed74de878, type: 3}
   textbox: {fileID: 1309470699}
   flowerBoxTopLeft: {x: -6, y: 3.5}
   flowerBoxHeight: 5
@@ -645,7 +699,6 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Name: flowerSketchAnim
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.3854, y: -0.9635}
