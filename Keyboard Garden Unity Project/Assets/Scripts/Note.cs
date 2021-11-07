@@ -13,10 +13,13 @@ public class Note : MonoBehaviour
 	}
 	public AudioClip audioClip; // the audioclip this flower plays, assigned by KeyboardInput
 	AudioSource audioSource; // the flower's AudioSource component
+	Animator animator;
 	// Start is called before the first frame update
 	void Start()
 	{
-		AssignColor();
+		//AssignColor();
+		animator = GetComponent<Animator>();
+		animator.speed = 1 / (audioClip.length / animator.GetCurrentAnimatorStateInfo(0).length);
 		audioSource = GetComponent<AudioSource>();
 		audioSource.clip = audioClip;
 		audioSource.Play();
@@ -25,12 +28,13 @@ public class Note : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		/*
 		timer -= Time.deltaTime;
 		if (timer <= 0)
 		{
 			Destroy(gameObject);
 		}
-
+		*/
 	}
 
 	void AssignColor()
