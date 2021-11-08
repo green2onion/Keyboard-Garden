@@ -531,9 +531,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a90da4a878d7462419442b0ed74de878, type: 3}
   - {fileID: 8300000, guid: a90da4a878d7462419442b0ed74de878, type: 3}
   textbox: {fileID: 1309470699}
-  flowerBoxTopLeft: {x: -6, y: 3.5}
+  flowerBoxTopLeft: {x: -6, y: 2.5}
   flowerBoxHeight: 5
-  flowerBoxWidth: 7.5
+  flowerBoxWidth: 7
 --- !u!1 &1309470698
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,8 +574,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8eeae42bf8bd25d448955e1564c4b957, type: 2}
+  m_sharedMaterial: {fileID: 7726517638059353840, guid: 8eeae42bf8bd25d448955e1564c4b957, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -663,7 +663,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 7726517638059353840, guid: 8eeae42bf8bd25d448955e1564c4b957, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -909,10 +909,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3024761578441025908, guid: ec26512c428b10643ba95893ab531a64, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3024761578441025909, guid: ec26512c428b10643ba95893ab531a64, type: 3}
-      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
