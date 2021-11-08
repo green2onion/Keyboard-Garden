@@ -8,14 +8,14 @@ public class KeyboardInput : MonoBehaviour
 {
 	public static KeyboardInput keyboardInput;
 	[SerializeField] GameObject flower;
-	List<GameObject> flowers;
+
 	[SerializeField] AudioClip[] notes;
 	[SerializeField] TextMeshPro textbox;
 	Keyboard keyboard;
 	[SerializeField] Vector2 flowerBoxTopLeft;
 	[SerializeField] float flowerBoxHeight;
 	[SerializeField] float flowerBoxWidth;
-
+	Page page;
 
 
 	private void Awake()
@@ -26,7 +26,7 @@ public class KeyboardInput : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		flowers = new List<GameObject>();
+		page = textbox.gameObject.GetComponent<Page>();
 	}
 
 	// Update is called once per frame
@@ -69,7 +69,7 @@ public class KeyboardInput : MonoBehaviour
 		Vector2 spawnPosition = new Vector2(spawnX, spawnY);
 		GameObject newFlower = Instantiate(flower, spawnPosition, Quaternion.identity);
 		newFlower.GetComponent<Note>().audioClip = notes[flowerIndex];
-		flowers.Add(newFlower);
+		page.AddFlower(newFlower);
 
 	}
 
@@ -79,7 +79,8 @@ public class KeyboardInput : MonoBehaviour
 		{
 			if (inputChar == 32) // space == flower 33
 			{
-				textbox.text += inputChar;
+				//textbox.text += inputChar;
+				page.AddCharToPage(inputChar);
 				SpawnFlower(33);
 			}
 			else if (inputChar == 8) // backspace == flower 32
@@ -87,39 +88,46 @@ public class KeyboardInput : MonoBehaviour
 				if (textbox.text.Length > 0)
 				{
 					string temp = textbox.text;
-					textbox.text = temp.Remove(textbox.text.Length - 1, 1);
-					SpawnFlower(32); 
+					//textbox.text = temp.Remove(textbox.text.Length - 1, 1);
+					page.Backspace();
+					//SpawnFlower(32); 
 				}
 
 			}
 			else if (inputChar == '!')
 			{
 				SpawnFlower(27); // flower 27 is !
-				textbox.text += inputChar;
+				//textbox.text += inputChar;
+				page.AddCharToPage(inputChar);
 			}
 			else if (inputChar == ',')
 			{
 				SpawnFlower(28); // flower 28 is ,
-				textbox.text += inputChar;
+				//textbox.text += inputChar;
+				page.AddCharToPage(inputChar);
 			}
 			else if (inputChar == '.')
 			{
 				SpawnFlower(29); // flower 29 is .
-				textbox.text += inputChar;
+				//textbox.text += inputChar;
+				page.AddCharToPage(inputChar);
 			}
 			else if (inputChar == '?')
 			{
 				SpawnFlower(30); // flower 30 is !
-				textbox.text += inputChar;
+				//textbox.text += inputChar;
+				page.AddCharToPage(inputChar);
 			}
 			else if (inputChar == '\n')
 			{
 				SpawnFlower(31); // flower 31 is enter
-				textbox.text += inputChar;
+				//textbox.text += inputChar;
+				page.AddCharToPage(inputChar);
 			}
 			else if (inputChar >= 33 && inputChar <= 64) // other special characters, default sound
 			{
-				textbox.text += inputChar;
+				//textbox.text += inputChar;
+				page.AddCharToPage(inputChar);
 				SpawnFlower(34); // default sound == 34
 			}
 			else
@@ -129,7 +137,8 @@ public class KeyboardInput : MonoBehaviour
 				{
 					int flowerIndex = temp - 65;
 					SpawnFlower(flowerIndex);
-					textbox.text += inputChar;
+					//textbox.text += inputChar;
+					page.AddCharToPage(inputChar);
 				}
 			}
 		}

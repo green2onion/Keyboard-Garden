@@ -77908,7 +77908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41bc88a501597e44d92d5285af6aaed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  decayTimer: 5
   audioClip: {fileID: 8300000, guid: 94c71f8899c55574d91267856a08e164, type: 3}
 --- !u!82 &-2073002414930396139
 AudioSource:
