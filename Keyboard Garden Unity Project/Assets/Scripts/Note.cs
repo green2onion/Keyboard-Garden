@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-	public float timer;
+	[SerializeField] float decayTimer;
 	public enum instrument // not in use yet, could be useful later
 	{
 		piano,
@@ -14,10 +14,12 @@ public class Note : MonoBehaviour
 	public AudioClip audioClip; // the audioclip this flower plays, assigned by KeyboardInput
 	AudioSource audioSource; // the flower's AudioSource component
 	Animator animator;
+	bool isDecaying;
 	// Start is called before the first frame update
 	void Start()
 	{
 		//AssignColor();
+		isDecaying = false;
 		animator = GetComponent<Animator>();
 		animator.speed = 1 / (audioClip.length / animator.GetCurrentAnimatorStateInfo(0).length);
 		audioSource = GetComponent<AudioSource>();
@@ -28,13 +30,31 @@ public class Note : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		/*
-		timer -= Time.deltaTime;
-		if (timer <= 0)
+		
+		if (isDecaying)
 		{
-			Destroy(gameObject);
+			decayTimer -= Time.deltaTime;
+			if (decayTimer <= 0)
+			{
+				Destroy(gameObject);
+			}
 		}
-		*/
+
+		
+	}
+
+	public void StopPlaying()
+	{
+		animator.StopPlayback();
+	}
+	public void Decay()
+	{
+		
+		animator.speed = 5;
+		animator.SetFloat("Direction", -1);
+		animator.Play("flowerSketch", -1, float.NegativeInfinity);
+		isDecaying = true;
+
 	}
 
 	void AssignColor()
