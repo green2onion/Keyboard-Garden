@@ -45,14 +45,14 @@ public class Note : MonoBehaviour
 
 	public void StopPlaying()
 	{
-		animator.StopPlayback();
+		//Debug.Log("animation event triggered");
 	}
 	public void Decay()
 	{
-		
+
 		animator.speed = 5;
 		animator.SetFloat("Direction", -1);
-		animator.Play("flowerSketch", -1, float.NegativeInfinity);
+		animator.Play("flowerSketch", 0, 1f);
 		isDecaying = true;
 
 	}
