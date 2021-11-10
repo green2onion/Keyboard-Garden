@@ -737,7 +737,42 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 25417370ae517e84499f55e8339d9ccd, type: 3}
   - {fileID: 8300000, guid: a90da4a878d7462419442b0ed74de878, type: 3}
   - {fileID: 8300000, guid: a90da4a878d7462419442b0ed74de878, type: 3}
-  notesAnim: []
+  notesAnim:
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   textbox: {fileID: 1309470699}
   flowerBoxTopLeft: {x: -6, y: 2.5}
   flowerBoxHeight: 5
@@ -1188,7 +1223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3024761578441025898, guid: ec26512c428b10643ba95893ab531a64, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3024761578441025908, guid: ec26512c428b10643ba95893ab531a64, type: 3}
       propertyPath: m_RootOrder
