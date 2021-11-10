@@ -12,6 +12,7 @@ public class Note : MonoBehaviour
 		guitar
 	}
 	public AudioClip audioClip; // the audioclip this flower plays, assigned by KeyboardInput
+	public AnimationClip animationClip; //the animation clip this flower plays, assigned by KeyboardInput
 	AudioSource audioSource; // the flower's AudioSource component
 	Animator animator;
 	bool isDecaying;
@@ -47,6 +48,7 @@ public class Note : MonoBehaviour
 	{
 		animator.StopPlayback();
 	}
+
 	public void Decay()
 	{
 		
