@@ -13,6 +13,8 @@ public class Note : MonoBehaviour
 	}
 	public AudioClip audioClip; // the audioclip this flower plays, assigned by KeyboardInput
 	public AnimationClip animationClip; //the animation clip this flower plays, assigned by KeyboardInput
+	public SpriteRenderer spriteRenderer;
+	public Sprite sprite;
 	Animation anim;
 	AudioSource audioSource; // the flower's AudioSource component
 	Animator animator;
@@ -27,8 +29,11 @@ public class Note : MonoBehaviour
 		audioSource = GetComponent<AudioSource>();
 		audioSource.clip = audioClip;
 		audioSource.Play();
+		spriteRenderer = GetComponent<SpriteRenderer>();
+		spriteRenderer.sprite = sprite;
 		anim.clip = animationClip;
 		anim.Play();
+
 	}
 
 	// Update is called once per frame

@@ -77910,6 +77910,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decayTimer: 5
   audioClip: {fileID: 8300000, guid: 94c71f8899c55574d91267856a08e164, type: 3}
+  animationClip: {fileID: 0}
+  spriteRenderer: {fileID: 0}
+  sprite: {fileID: 0}
 --- !u!82 &-2073002414930396139
 AudioSource:
   m_ObjectHideFlags: 0
@@ -82844,7 +82847,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3024761578441025898}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2111404b1a2df4f0492e8b7808b94af7, type: 2}
   m_CullingMode: 0
