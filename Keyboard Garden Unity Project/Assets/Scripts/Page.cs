@@ -7,6 +7,7 @@ public class Page : MonoBehaviour
 {
 	TextMeshPro textbox;
 	List<string> pages;
+	public List<bool> isLocked;
 	public int currentPage;
 	List<List<GameObject>> pagesOfFlowers;
 	[SerializeField] float fadeMultiplier;
@@ -18,6 +19,7 @@ public class Page : MonoBehaviour
 	{
 		textbox = gameObject.GetComponent<TextMeshPro>();
 		pages = new List<string>();
+		isLocked = new List<bool>();
 		pagesOfFlowers = new List<List<GameObject>>();
 		AddPage();
 
@@ -72,19 +74,28 @@ public class Page : MonoBehaviour
 		pages.Add(string.Empty);
 		List<GameObject> flowersOfThePage = new List<GameObject>();
 		pagesOfFlowers.Add(flowersOfThePage);
+		isLocked.Add(false);
 	}
 
 	public void AddCharToPage(char input)
 	{
-		pages[currentPage] += input;
+		if (!isLocked[currentPage])
+		{
+			pages[currentPage] += input;
+		}
+		
 	}
 	public void Backspace()
 	{
-		string temp = pages[currentPage];
-		pages[currentPage] = temp.Remove(pages[currentPage].Length - 1, 1);
-		GameObject flowerToRemove = pagesOfFlowers[currentPage][pagesOfFlowers[currentPage].Count - 1];
-		flowerToRemove.GetComponent<Note>().Decay();
-		pagesOfFlowers[currentPage].Remove(flowerToRemove);
+		if (!isLocked[currentPage])
+		{
+			string temp = pages[currentPage];
+			pages[currentPage] = temp.Remove(pages[currentPage].Length - 1, 1);
+			GameObject flowerToRemove = pagesOfFlowers[currentPage][pagesOfFlowers[currentPage].Count - 1];
+			flowerToRemove.GetComponent<Note>().Decay();
+			pagesOfFlowers[currentPage].Remove(flowerToRemove);
+		}
+
 	}
 
 	void TextFadeOut(bool isForward)
@@ -102,11 +113,17 @@ public class Page : MonoBehaviour
 				}
 
 			}
-			else
+			else // finished fading out, loads next/previous page
 			{
 				textbox.alpha = 0;
+				foreach (GameObject flower in pagesOfFlowers[currentPage])
+				{
+					Color tempColor = new Color(255, 255, 255, 0);
+					flower.GetComponent<SpriteRenderer>().color = tempColor;
+				}
 				isFadingOut = false;
 				isFadingIn = true;
+				isLocked[currentPage] = true;
 				if (isForward)
 				{
 					currentPage++;
@@ -115,7 +132,8 @@ public class Page : MonoBehaviour
 				{
 					currentPage--;
 				}
-				
+				StopAllCoroutines();
+				StartCoroutine(playAudioSequentially());
 
 			}
 		}
@@ -141,10 +159,49 @@ public class Page : MonoBehaviour
 			else
 			{
 				textbox.alpha = 1f;
+				foreach (GameObject flower in pagesOfFlowers[currentPage])
+				{
+					Color tempColor = new Color(255, 255, 255, 1);
+					flower.GetComponent<SpriteRenderer>().color = tempColor;
+				}
 				isFadingIn = false;
 				Debug.Log("no longer fading in");
 			}
 		}
 
+	}
+
+
+
+
+	IEnumerator playAudioSequentially()
+	{
+		AudioSource adSource = GetComponent<AudioSource>();
+		List<AudioClip> adClips = new List<AudioClip>();
+		foreach(GameObject flower in pagesOfFlowers[currentPage])
+		{
+			adClips.Add(flower.GetComponent<Note>().audioClip);
+		}
+
+
+		yield return null;
+
+		//1.Loop through each AudioClip
+		for (int i = 0; i < adClips.Count; i++)
+		{
+			//2.Assign current AudioClip to audiosource
+			adSource.clip = adClips[i];
+
+			//3.Play Audio
+			adSource.Play();
+
+			//4.Wait for it to finish playing
+			while (adSource.isPlaying)
+			{
+				yield return null;
+			}
+
+			//5. Go back to #2 and play the next audio in the adClips array
+		}
 	}
 }

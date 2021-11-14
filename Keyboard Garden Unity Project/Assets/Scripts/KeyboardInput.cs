@@ -65,15 +65,19 @@ public class KeyboardInput : MonoBehaviour
 
 	void SpawnFlower(int flowerIndex)
 	{
-		float spawnY = Random.Range(flowerBoxTopLeft.y, flowerBoxTopLeft.y - flowerBoxWidth);
-		float spawnX = Random.Range(flowerBoxTopLeft.x, flowerBoxTopLeft.x + flowerBoxHeight);
+		if (!page.isLocked[page.currentPage])
+		{
+			float spawnY = Random.Range(flowerBoxTopLeft.y, flowerBoxTopLeft.y - flowerBoxWidth);
+			float spawnX = Random.Range(flowerBoxTopLeft.x, flowerBoxTopLeft.x + flowerBoxHeight);
 
-		Vector2 spawnPosition = new Vector2(spawnX, spawnY);
-		GameObject newFlower = Instantiate(flower, spawnPosition, Quaternion.identity);
-		newFlower.GetComponent<Note>().audioClip = notes[flowerIndex];
-		//newFlower.GetComponent<Note>().animationClip = notesAnim[flowerIndex];
-		//newFlower.GetComponent<Note>().sprite = noteSprite[flowerIndex];
-		page.AddFlower(newFlower);
+			Vector2 spawnPosition = new Vector2(spawnX, spawnY);
+			GameObject newFlower = Instantiate(flower, spawnPosition, Quaternion.identity);
+			newFlower.GetComponent<Note>().audioClip = notes[flowerIndex];
+			//newFlower.GetComponent<Note>().animationClip = notesAnim[flowerIndex];
+			//newFlower.GetComponent<Note>().sprite = noteSprite[flowerIndex];
+			page.AddFlower(newFlower);
+		}
+
 
 	}
 
@@ -91,7 +95,7 @@ public class KeyboardInput : MonoBehaviour
 			{
 				if (textbox.text.Length > 0)
 				{
-					string temp = textbox.text;
+					//string temp = textbox.text;
 					//textbox.text = temp.Remove(textbox.text.Length - 1, 1);
 					page.Backspace();
 					//SpawnFlower(32); 
