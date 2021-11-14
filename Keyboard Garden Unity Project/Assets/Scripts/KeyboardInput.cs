@@ -71,8 +71,8 @@ public class KeyboardInput : MonoBehaviour
 		Vector2 spawnPosition = new Vector2(spawnX, spawnY);
 		GameObject newFlower = Instantiate(flower, spawnPosition, Quaternion.identity);
 		newFlower.GetComponent<Note>().audioClip = notes[flowerIndex];
-		newFlower.GetComponent<Note>().animationClip = notesAnim[flowerIndex];
-		newFlower.GetComponent<Note>().sprite = noteSprite[flowerIndex];
+		//newFlower.GetComponent<Note>().animationClip = notesAnim[flowerIndex];
+		//newFlower.GetComponent<Note>().sprite = noteSprite[flowerIndex];
 		page.AddFlower(newFlower);
 
 	}

@@ -28,6 +28,6 @@ public class PageFlipButton : MonoBehaviour
 	private void OnMouseDown()
 	{
         Debug.Log("clicked");
-        textMesh.gameObject.GetComponent<Page>().NextPage();
+        textMesh.gameObject.GetComponent<Page>().NextPage(true);
 	}
 }

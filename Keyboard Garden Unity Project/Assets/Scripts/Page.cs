@@ -8,16 +8,17 @@ public class Page : MonoBehaviour
 	TextMeshPro textbox;
 	List<string> pages;
 	public int currentPage;
-	List<GameObject> flowers;
+	List<List<GameObject>> pagesOfFlowers;
 	[SerializeField] float fadeMultiplier;
 	public bool isFadingOut;
 	public bool isFadingIn;
+	public bool isForward;
 	// Start is called before the first frame update
 	void Start()
 	{
 		textbox = gameObject.GetComponent<TextMeshPro>();
 		pages = new List<string>();
-		flowers = new List<GameObject>();
+		pagesOfFlowers = new List<List<GameObject>>();
 		AddPage();
 
 	}
@@ -31,31 +32,46 @@ public class Page : MonoBehaviour
 
 		if (isFadingOut)
 		{
-			TextFadeOut();
+			TextFadeOut(isForward);
 		}
 		if (isFadingIn)
 		{
 			TextFadeIn();
 		}
 	}
-
-	public void NextPage()  // +1 or -1 page
+	public void NextPage(bool isForward)  // +1 or -1 page
 	{
 		if (!isFadingIn && !isFadingOut)
 		{
-			AddPage();
-			isFadingOut = true;
+			this.isForward = isForward;
+			if (isForward)
+			{
+				
+				AddPage();
+				isFadingOut = true;
+			}
+			else
+			{
+				if (currentPage>0)
+				{
+					isFadingOut = true;
+				}
+				
+			}
+			
 		}
 		
 	}
 
 	public void AddFlower(GameObject flower)
 	{
-		flowers.Add(flower);
+		pagesOfFlowers[currentPage].Add(flower);
 	}
 	void AddPage()
 	{
 		pages.Add(string.Empty);
+		List<GameObject> flowersOfThePage = new List<GameObject>();
+		pagesOfFlowers.Add(flowersOfThePage);
 	}
 
 	public void AddCharToPage(char input)
@@ -66,19 +82,24 @@ public class Page : MonoBehaviour
 	{
 		string temp = pages[currentPage];
 		pages[currentPage] = temp.Remove(pages[currentPage].Length - 1, 1);
-		GameObject flowerToRemove = flowers[flowers.Count - 1];
+		GameObject flowerToRemove = pagesOfFlowers[currentPage][pagesOfFlowers[currentPage].Count - 1];
 		flowerToRemove.GetComponent<Note>().Decay();
-		flowers.Remove(flowerToRemove);
+		pagesOfFlowers[currentPage].Remove(flowerToRemove);
 	}
 
-	void TextFadeOut()
+	void TextFadeOut(bool isForward)
 	{
 		if(!isFadingIn)
 		{
 			if (textbox.alpha > 0)
 			{
 				textbox.alpha -= (Time.deltaTime * fadeMultiplier);
-
+				foreach(GameObject flower in pagesOfFlowers[currentPage])
+				{
+					Color tempColor = flower.GetComponent<SpriteRenderer>().color;
+					tempColor.a -= (Time.deltaTime * fadeMultiplier);
+					flower.GetComponent<SpriteRenderer>().color = tempColor;
+				}
 
 			}
 			else
@@ -86,7 +107,15 @@ public class Page : MonoBehaviour
 				textbox.alpha = 0;
 				isFadingOut = false;
 				isFadingIn = true;
-				currentPage++;
+				if (isForward)
+				{
+					currentPage++;
+				}
+				else
+				{
+					currentPage--;
+				}
+				
 
 			}
 		}
@@ -101,6 +130,12 @@ public class Page : MonoBehaviour
 			if (textbox.alpha < 1f)
 			{
 				textbox.alpha += (Time.deltaTime * fadeMultiplier);
+				foreach (GameObject flower in pagesOfFlowers[currentPage])
+				{
+					Color tempColor = flower.GetComponent<SpriteRenderer>().color;
+					tempColor.a += (Time.deltaTime * fadeMultiplier);
+					flower.GetComponent<SpriteRenderer>().color = tempColor;
+				}
 				Debug.Log(textbox.alpha);
 			}
 			else
