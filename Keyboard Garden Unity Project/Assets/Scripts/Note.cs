@@ -31,8 +31,8 @@ public class Note : MonoBehaviour
 		audioSource.Play();
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		spriteRenderer.sprite = sprite;
-		anim.clip = animationClip;
-		anim.Play();
+		//anim.clip = animationClip;
+		//anim.Play();
 
 	}
 
