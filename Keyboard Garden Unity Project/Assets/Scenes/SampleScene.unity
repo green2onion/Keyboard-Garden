@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &195750917
 Animator:
   serializedVersion: 3
@@ -242,7 +242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &408665972
 Animator:
   serializedVersion: 3
@@ -337,13 +337,14 @@ GameObject:
   m_Component:
   - component: {fileID: 494210583}
   - component: {fileID: 494210582}
+  - component: {fileID: 494210584}
   m_Layer: 0
   m_Name: pebbleTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &494210582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -409,6 +410,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &494210584
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494210581}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f961fb71e4764cb40b1c7c06c6f7666c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &568429929
 Animator:
   serializedVersion: 3
@@ -745,6 +765,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  notesAnim: []
+  noteSprite: []
   textbox: {fileID: 1309470699}
   flowerBoxTopLeft: {x: -6, y: 3.5}
   flowerBoxHeight: 5
@@ -812,6 +834,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  notesAnim: []
+  noteSprite: []
   textbox: {fileID: 1309470699}
   flowerBoxTopLeft: {x: -6, y: 3.5}
   flowerBoxHeight: 5
@@ -865,6 +889,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  notesAnim: []
+  noteSprite: []
   textbox: {fileID: 1309470699}
   flowerBoxTopLeft: {x: -6, y: 3.5}
   flowerBoxHeight: 5
@@ -918,6 +944,43 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 25417370ae517e84499f55e8339d9ccd, type: 3}
   - {fileID: 8300000, guid: a90da4a878d7462419442b0ed74de878, type: 3}
   - {fileID: 8300000, guid: a90da4a878d7462419442b0ed74de878, type: 3}
+  notesAnim:
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 7400000, guid: eaf6df428880f4b00a486a7c9a107bca, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  noteSprite: []
   textbox: {fileID: 1309470699}
   flowerBoxTopLeft: {x: -6, y: 2.5}
   flowerBoxHeight: 5
@@ -932,6 +995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1001237196}
   - component: {fileID: 1001237195}
+  - component: {fileID: 1001237197}
   m_Layer: 0
   m_Name: rockTwo
   m_TagString: Untagged
@@ -1004,6 +1068,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1001237197
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001237194}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 269a1436f9bcab148b0a8ea9d965ac37, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1032740683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1032740684
 Animator:
   serializedVersion: 3
@@ -1289,6 +1372,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7ff09bde4464ef5b8cfab84239c8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPage: 0
+  fadeMultiplier: 0
+  isFadingOut: 0
+  isFadingIn: 0
 --- !u!1 &1323156186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,13 +1452,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1364094479}
   - component: {fileID: 1364094478}
+  - component: {fileID: 1364094480}
   m_Layer: 0
   m_Name: pebbleOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1364094478
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1437,6 +1525,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1364094480
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364094477}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a11d999426d1e3f48a6c3e88d9c5bd4b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1637810496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,7 +1561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1637810497
 Animator:
   serializedVersion: 3
@@ -1631,13 +1738,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1990977219}
   - component: {fileID: 1990977218}
+  - component: {fileID: 1990977220}
   m_Layer: 0
   m_Name: rockOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1990977218
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1703,6 +1811,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1990977220
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990977217}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: be0ae78e95c79e04d94fed8ce3084f93, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2049624114
 PrefabInstance:
   m_ObjectHideFlags: 0
