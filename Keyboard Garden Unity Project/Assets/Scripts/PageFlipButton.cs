@@ -32,7 +32,7 @@ public class PageFlipButton : MonoBehaviour
 	{
 		spriteRenderer.enabled = true;
 		animator.enabled = true;
-		animator.Play(animator.GetCurrentAnimatorClipInfo(0)[0].clip.name, 0);
+		animator.Play("rightCorner", 0);
 
 	}
 	private void OnMouseExit()
