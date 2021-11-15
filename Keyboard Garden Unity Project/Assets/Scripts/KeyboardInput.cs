@@ -10,7 +10,7 @@ public class KeyboardInput : MonoBehaviour
 	[SerializeField] GameObject flower;
 
 	[SerializeField] AudioClip[] notes;
-	[SerializeField] AnimationClip[] notesAnim;
+	[SerializeField] RuntimeAnimatorController[] runtimeAnimatorControllers;
 	[SerializeField] Sprite[] noteSprite;
 	[SerializeField] TextMeshPro textbox;
 	Keyboard keyboard;
@@ -73,8 +73,9 @@ public class KeyboardInput : MonoBehaviour
 			Vector2 spawnPosition = new Vector2(spawnX, spawnY);
 			GameObject newFlower = Instantiate(flower, spawnPosition, Quaternion.identity);
 			newFlower.GetComponent<Note>().audioClip = notes[flowerIndex];
-			//newFlower.GetComponent<Note>().animationClip = notesAnim[flowerIndex];
-			//newFlower.GetComponent<Note>().sprite = noteSprite[flowerIndex];
+			//var temp = Instantiate(Resources.Load<RuntimeAnimatorController>("blue1"));
+			newFlower.GetComponent<Note>().SetRuntimeAnimatorController(runtimeAnimatorControllers[flowerIndex]);
+			newFlower.GetComponent<Note>().sprite = noteSprite[flowerIndex];
 			page.AddFlower(newFlower);
 		}
 

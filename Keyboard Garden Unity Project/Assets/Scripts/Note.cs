@@ -12,13 +12,18 @@ public class Note : MonoBehaviour
 		guitar
 	}
 	public AudioClip audioClip; // the audioclip this flower plays, assigned by KeyboardInput
-	public AnimationClip animationClip; //the animation clip this flower plays, assigned by KeyboardInput
+	RuntimeAnimatorController animatorController; //the animation clip this flower plays, assigned by KeyboardInput
 	public SpriteRenderer spriteRenderer;
 	public Sprite sprite;
-	Animation anim;
 	AudioSource audioSource; // the flower's AudioSource component
 	Animator animator;
 	bool isDecaying;
+
+	public void SetRuntimeAnimatorController(RuntimeAnimatorController runtimeAnimatorController)
+	{
+		this.animatorController = runtimeAnimatorController;
+		
+	}
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -31,8 +36,8 @@ public class Note : MonoBehaviour
 		audioSource.Play();
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		spriteRenderer.sprite = sprite;
-		//anim.clip = animationClip;
-		//anim.Play();
+		animator.runtimeAnimatorController = animatorController as RuntimeAnimatorController;
+		//anim.runtimeAnimatorController = animatorController;
 
 	}
 
@@ -62,7 +67,7 @@ public class Note : MonoBehaviour
 
 		animator.speed = 5;
 		animator.SetFloat("Direction", -1);
-		animator.Play("flowerSketch", 0, 1f);
+		animator.Play(animator.GetCurrentAnimatorClipInfo(0)[0].clip.name, 0, 1f);
 		isDecaying = true;
 
 	}
