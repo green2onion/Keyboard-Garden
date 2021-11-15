@@ -11,17 +11,24 @@ public class startButton : MonoBehaviour
     bool hover;
     public Color hoverColor, noHoverColor;
     public SpriteRenderer greenButtonSprite;
+    AudioSource audio;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audio = GetComponent<AudioSource>();
+        hover = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+          if (hover == false)
+        {
+            audio.Play();
+        }
+
           if (Input.GetMouseButtonDown(0) && hover == true)
           {
               SceneManager.LoadScene("SampleScene 1");
