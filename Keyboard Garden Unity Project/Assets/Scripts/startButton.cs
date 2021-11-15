@@ -18,7 +18,7 @@ public class startButton : MonoBehaviour
     void Start()
     {
         audio = GetComponent<AudioSource>();
-        hover = true;
+        hover = false;
     }
 
     // Update is called once per frame
