@@ -1040,7 +1040,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -5902,7 +5902,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -10764,7 +10764,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.6849308
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -15626,7 +15626,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -20488,7 +20488,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -25350,7 +25350,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -30212,7 +30212,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -35074,7 +35074,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -39936,7 +39936,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -44798,7 +44798,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -49660,7 +49660,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.6301365
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -54522,7 +54522,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -59384,7 +59384,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -64246,7 +64246,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -69108,7 +69108,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -73970,7 +73970,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232986
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -77910,7 +77910,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decayTimer: 5
   audioClip: {fileID: 8300000, guid: 94c71f8899c55574d91267856a08e164, type: 3}
-  animationClip: {fileID: 0}
   spriteRenderer: {fileID: 0}
   sprite: {fileID: 0}
 --- !u!82 &-2073002414930396139
@@ -83898,7 +83897,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
+          value: 0.71232796
           inSlope: 0
           outSlope: 0
           tangentMode: 0
